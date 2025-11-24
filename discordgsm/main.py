@@ -36,7 +36,7 @@ load_dotenv()
 database.create_table_if_not_exists()
 
 messages: dict[int, Message] = {}
-"""DiscordGSM messages cache"""
+"""GameServerMonitor messages cache"""
 
 
 def cache_message(message: Message):
@@ -203,7 +203,7 @@ def alert_embed(server: Server, alert: Alert):
     query_time = datetime.now(tz=tz(server.style_data.get('timezone', 'Etc/UTC'))).strftime(time_format)
     query_time = t('embed.alert.footer.query_time', locale).format(query_time=query_time)
     icon_url = 'https://avatars.githubusercontent.com/u/61296017'
-    embed.set_footer(text=f'DiscordGSM {__version__} | {query_time}', icon_url=icon_url)
+    embed.set_footer(text=f'GameServerMonitor {__version__} | {query_time}', icon_url=icon_url)
 
     return embed
 
@@ -347,19 +347,19 @@ def query_server_modal_handler(interaction: Interaction, game: GamedigGame, is_a
     return modal
 
 
-@tree.command(name='sponsor', description='Sponsor to DiscordGSM', guilds=whitelist_guilds)
+@tree.command(name='sponsor', description='Sponsor to GameServerMonitor', guilds=whitelist_guilds)
 async def command_sponsor(interaction: Interaction):
-    """Sponsor to DiscordGSM"""
+    """Sponsor to GameServerMonitor"""
     Logger.command(interaction)
 
-    title = 'DiscordGSM/GameServerMonitor'
+    title = 'GameServerMonitor'
     description = \
     """
-    Thank you for considering a DiscordGSM sponsorship!
+    Thank you for considering a GameServerMonitor sponsorship!
 
-    DiscordGSM is a free and open-source solution to your discord server monitoring your game servers on Discord and tracking the live data of your game servers.
+    GameServerMonitor is a free and open-source solution to your discord server monitoring your game servers on Discord and tracking the live data of your game servers.
 
-    Your sponsorship helps us keep a team of maintainers actively working to improve DiscordGSM and ensure it stays up-to-date with the latest Discord changes.
+    Your sponsorship helps us keep a team of maintainers actively working to improve GameServerMonitor and ensure it stays up-to-date with the latest Discord changes.
     """
     embed = Embed(title=title, description=description, color=discord.Color.from_rgb(88, 101, 242))
     embed.add_field(name='❤️ Github Sponsor', value='https://github.com/sponsors/DiscordGSM')

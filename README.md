@@ -1,4 +1,4 @@
-# Discord Game Server Monitor
+# GameServerMonitor
 [![Python Package](https://github.com/DiscordGSM/GameServerMonitor/actions/workflows/python-package.yml/badge.svg)](https://github.com/DiscordGSM/GameServerMonitor/actions/workflows/python-package.yml)
 [![Docker Image](https://github.com/DiscordGSM/GameServerMonitor/actions/workflows/docker-image.yml/badge.svg)](https://github.com/DiscordGSM/GameServerMonitor/actions/workflows/docker-image.yml)
 [![Discord Shield](https://discordapp.com/api/guilds/680159496584429582/widget.png?style=shield)](https://discordgsm.com/discord)

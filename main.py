@@ -1,8 +1,8 @@
 from discordgsm import Logger, __version__, env
 
 if __name__ == '__main__':
-    Logger.info(f'Started Discord Game Server Monitor {__version__}')
-    Logger.info('Thank you for using DiscordGSM, you may consider sponsoring us ♥. Github Sponsors: https://github.com/sponsors/DiscordGSM')
+    Logger.info(f'Started GameServerMonitor {__version__}')
+    Logger.info('Thank you for using GameServerMonitor, you may consider sponsoring us ♥. Github Sponsors: https://github.com/sponsors/DiscordGSM')
 
     token = str(env('APP_TOKEN')).strip()
     items = token.split('.')
@@ -20,4 +20,4 @@ if __name__ == '__main__':
     client.run(token)
 
     exit_signal.set()
-    Logger.info('Stopping Discord Game Server Monitor...')
+    Logger.info('Stopping GameServerMonitor...')

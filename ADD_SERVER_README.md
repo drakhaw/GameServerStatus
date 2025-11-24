@@ -1,12 +1,12 @@
-# DiscordGSM Server Automation Script
+# GameServerMonitor Server Automation Script
 
-Script for automating server additions to DiscordGSM's SQLite database.
+Script for automating server additions to GameServerMonitor's SQLite database.
 
 ## Requirements
 
 - Python 3.9+
 - SQLite3
-- DiscordGSM's virtual environment
+- GameServerMonitor's virtual environment
 ```bash
 source /path/to/discordgsm/venv/bin/activate  # Linux/Mac
 \path\to\discordgsm\venv\Scripts\activate     # Windows

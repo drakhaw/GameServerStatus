@@ -14,7 +14,7 @@ log_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'data
 Path(log_path).mkdir(parents=True, exist_ok=True)
 
 # Set up TimedRotatingFileHandler
-file_handler = TimedRotatingFileHandler(os.path.join(log_path, 'discordgsm.log'), when='D', encoding='utf-8')
+file_handler = TimedRotatingFileHandler(os.path.join(log_path, 'gameservermonitor.log'), when='D', encoding='utf-8')
 file_handler.namer = lambda name: name.replace('.log', '') + '.log'
 formatter = logging.Formatter('[{asctime}] [{levelname:<8}] {name}: {message}', '%Y-%m-%d %H:%M:%S', style='{')
 utils.setup_logging(handler=file_handler, formatter=formatter, root=True)

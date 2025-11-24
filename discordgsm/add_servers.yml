@@ -1,5 +1,5 @@
 ---
-- name: Add servers to DiscordGSM
+- name: Add servers to GameServerMonitor
   hosts: localhost
   gather_facts: no
   
@@ -82,13 +82,13 @@
         thumbnail_url: "https://example.com/icon.png"
 
   tasks:
-    - name: Ensure DiscordGSM database exists
+    - name: Ensure GameServerMonitor database exists
       stat:
         path: "{{ discordgsm_db }}"
       register: db_check
       failed_when: not db_check.stat.exists
       
-    - name: Add server to DiscordGSM
+    - name: Add server to GameServerMonitor
       command: >
         python3 add_server.py
         --guild_id {{ item.guild_id }}
